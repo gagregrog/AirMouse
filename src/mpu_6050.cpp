@@ -1,5 +1,6 @@
 #include "am/mpu.h"
 
+#ifdef USE_MPU6050
 bool sleepMPU = true;
 Adafruit_MPU6050 mpu;
 
@@ -38,3 +39,5 @@ void mpuRead(mpu_reading_t *reading) {
     reading->pitch = pitch;
     reading->yaw = yaw;
 };
+
+#endif
